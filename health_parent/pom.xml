@@ -16,7 +16,6 @@
         <module>health_web</module>
         <module>health_jobs</module>
         <module>healthmobile_web</module>
-        <module>springsecurity_demo</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -245,6 +244,7 @@
                 <groupId>javax.servlet</groupId>
                 <artifactId>servlet-api</artifactId>
                 <version>${servlet-api.version}</version>
+                <scope>provided</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
