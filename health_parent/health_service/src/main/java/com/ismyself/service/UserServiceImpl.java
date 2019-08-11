@@ -13,8 +13,7 @@ import com.ismyself.pojo.Permission;
 import com.ismyself.pojo.Role;
 import com.ismyself.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
 import java.util.List;
@@ -28,6 +27,7 @@ import java.util.Set;
  * @description：
  */
 @Service(interfaceClass = UserService.class)
+@Transactional
 public class UserServiceImpl implements UserService {
 
     @Autowired
