@@ -128,8 +128,12 @@
                                     </el-row>
                                     <el-row>
                                         <el-col :span="12">
-                                            <el-form-item label="性别" prop="gender">
-                                                <el-input v-model="formData.gender"/>
+                                            <el-form-item label="性别">
+                                                <el-select v-model="formData.grender">
+                                                    <el-option label="不限" value="0"></el-option>
+                                                    <el-option label="男" value="1"></el-option>
+                                                    <el-option label="女" value="2"></el-option>
+                                                </el-select>
                                             </el-form-item>
                                         </el-col>
                                     </el-row>
@@ -223,8 +227,12 @@
                                     </el-row>
                                     <el-row>
                                         <el-col :span="12">
-                                            <el-form-item label="性别" prop="gender">
-                                                <el-input v-model="formData.gender"/>
+                                            <el-form-item label="适用性别">
+                                                <el-select v-model="formData.gender">
+                                                    <el-option label="不限" value="0"></el-option>
+                                                    <el-option label="男" value="1"></el-option>
+                                                    <el-option label="女" value="2"></el-option>
+                                                </el-select>
                                             </el-form-item>
                                         </el-col>
                                     </el-row>

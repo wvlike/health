@@ -49,6 +49,7 @@ public class UserController {
         // 根据检查组的id查询检查组详细信息进行数据回显
         try {
             com.ismyself.pojo.User user = userService.findUserById(id);
+
             return new Result(true, MessageConstant.GET_USERINFO_SUCCESS, user);
         } catch (Exception e) {
             e.printStackTrace();
@@ -74,12 +75,6 @@ public class UserController {
         try {
             //对用户密码加密
             user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
-            //对性别进行替换
-            if ("男".equals(user.getGender())) {
-                user.setGender("1");
-            } else if ("女".equals(user.getGender())) {
-                user.setGender("2");
-            }
             userService.addUser(roleIds, user);
             //保存成功
             return new Result(true, MessageConstant.ADD_USER_SUCCESS);
