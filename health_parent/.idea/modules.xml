@@ -11,7 +11,6 @@
       <module fileurl="file://$PROJECT_DIR$/health_service/health_service.iml" filepath="$PROJECT_DIR$/health_service/health_service.iml" />
       <module fileurl="file://$PROJECT_DIR$/health_web/health_web.iml" filepath="$PROJECT_DIR$/health_web/health_web.iml" />
       <module fileurl="file://$PROJECT_DIR$/healthmobile_web/healthmobile_web.iml" filepath="$PROJECT_DIR$/healthmobile_web/healthmobile_web.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springsecurity_demo/springsecurity_demo.iml" filepath="$PROJECT_DIR$/springsecurity_demo/springsecurity_demo.iml" />
     </modules>
   </component>
 </project>

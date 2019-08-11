@@ -14,7 +14,6 @@
         <module name="health_service" />
         <module name="health_web" />
         <module name="healthmobile_web" />
-        <module name="springsecurity_demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

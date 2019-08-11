@@ -77,7 +77,6 @@
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:5.0.10.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-taglibs:5.0.10.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-acl:5.0.10.RELEASE" />
-          <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.5" />
           <element id="library" level="project" name="Maven: org.mongodb:mongodb-driver:3.6.3" />
           <element id="library" level="project" name="Maven: org.mongodb:bson:3.6.3" />
           <element id="library" level="project" name="Maven: org.mongodb:mongodb-driver-core:3.6.3" />
