@@ -1,6 +1,8 @@
 package com.ismyself.service;
 
 import com.alibaba.dubbo.config.annotation.Service;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.ismyself.constant.MessageConstant;
@@ -78,6 +80,19 @@ public class SetmealServiceImpl implements SetmealService {
         //添加新的setmeal and group信息
         setMealAndGroup(setmeal.getId(), ids);
 
+        ObjectMapper objectMapper = new ObjectMapper();
+        //将数据缓存在redis中
+        List<Setmeal> setmealList = setmealDao.findSetmealList();
+
+        String jsonstr = null;
+        try {
+            jsonstr = objectMapper.writeValueAsString(setmealList);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+        jedisPool.getResource().set("getAllSetmeal", jsonstr);
+
+
     }
 
     @Override
@@ -102,6 +117,20 @@ public class SetmealServiceImpl implements SetmealService {
         if (setmeal.getImg() != null || !"".equals(setmeal.getImg())) {
             savePic2Redis(setmeal.getImg());
         }
+        //将数据缓存在redis中
+        List<Setmeal> setmealList = setmealDao.findSetmealList();
+
+        String jsonstr = null;
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            jsonstr = objectMapper.writeValueAsString(setmealList);
+            jedisPool.getResource().set("getAllSetmeal", jsonstr);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+
+
+
     }
 
     public void setMealAndGroup(Integer setmealId, List<Integer> checkGroupIds) {
@@ -133,9 +162,22 @@ public class SetmealServiceImpl implements SetmealService {
         setmealDao.deleteMealAndGroup(id);
 
         setmealDao.deleteById(id);
+        //将数据缓存在redis中
+        List<Setmeal> setmealList = setmealDao.findSetmealList();
+        ObjectMapper objectMapper = new ObjectMapper();
+        String jsonstr = null;
+        try {
+            jsonstr = objectMapper.writeValueAsString(setmealList);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+        jedisPool.getResource().set("getAllSetmeal", jsonstr);
+
+
 
         return setmeal.getImg();
     }
+
 
 
 }

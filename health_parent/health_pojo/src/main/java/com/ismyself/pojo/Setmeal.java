@@ -7,6 +7,23 @@ import java.util.List;
  * 体检套餐
  */
 public class Setmeal implements Serializable {
+    @Override
+    public String toString() {
+        return "Setmeal{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", code='" + code + '\'' +
+                ", helpCode='" + helpCode + '\'' +
+                ", sex='" + sex + '\'' +
+                ", age='" + age + '\'' +
+                ", price=" + price +
+                ", remark='" + remark + '\'' +
+                ", attention='" + attention + '\'' +
+                ", img='" + img + '\'' +
+                ", checkGroups=" + checkGroups +
+                '}';
+    }
+
     private Integer id;
     private String name;
     private String code;
