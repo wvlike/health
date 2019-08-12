@@ -4,7 +4,11 @@ import com.alibaba.dubbo.config.annotation.Reference;
 import com.ismyself.constant.MessageConstant;
 import com.ismyself.entity.QueryPageBean;
 import com.ismyself.entity.Result;
+<<<<<<< HEAD
 import com.ismyself.pojo.Menu;
+=======
+import com.ismyself.pojo.CheckGroup;
+>>>>>>> e01b3a32a27b161269bdc036bebc58ffd7672bf5
 import com.ismyself.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -13,8 +17,11 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+<<<<<<< HEAD
 
 import static java.awt.SystemColor.menu;
+=======
+>>>>>>> e01b3a32a27b161269bdc036bebc58ffd7672bf5
 
 /**
  * package com.ismyself.controller;
@@ -34,7 +41,10 @@ public class UserController {
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e01b3a32a27b161269bdc036bebc58ffd7672bf5
     @RequestMapping("/getUsername")
     public Result getUsername() {
         try {
@@ -46,6 +56,7 @@ public class UserController {
         }
     }
 
+<<<<<<< HEAD
     @RequestMapping("/findUserMenuByUsername")
     public Result findUserMenuByUsername(String username) {
         try {
@@ -57,6 +68,8 @@ public class UserController {
         }
     }
 
+=======
+>>>>>>> e01b3a32a27b161269bdc036bebc58ffd7672bf5
     //根据ID查询用户
     @RequestMapping(value = "/findUserById", method = RequestMethod.GET)
     public Result findUserById(Integer id) {
@@ -73,6 +86,7 @@ public class UserController {
 
     //获取用户角色勾选状态
     @RequestMapping(value = "/findRoleIdsByUserId", method = RequestMethod.GET)
+<<<<<<< HEAD
     public Result findRoleIdsByUserId(Integer uid) {
         try {
             List<Integer> list = userService.findRoleIdsByUserId(uid);
@@ -80,6 +94,15 @@ public class UserController {
         } catch (Exception e) {
             e.printStackTrace();
             return new Result(false, MessageConstant.QUERY_ROLEIDS_FAIL);
+=======
+    public Result findRoleIdsByUserId(Integer uid){
+        try {
+            List<Integer> list = userService.findRoleIdsByUserId(uid);
+            return new Result(true,MessageConstant.QUERY_ROLEIDS_SUCCESS,list);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new Result(false,MessageConstant.QUERY_ROLEIDS_FAIL);
+>>>>>>> e01b3a32a27b161269bdc036bebc58ffd7672bf5
         }
     }
 
@@ -125,6 +148,7 @@ public class UserController {
 
     //编辑用户
     @RequestMapping(value = "/editUser", method = RequestMethod.POST)
+<<<<<<< HEAD
     public Result editUser(@RequestParam List<Integer> ids, @RequestBody com.ismyself.pojo.User user) {
         try {
             userService.editUser(ids, user);
@@ -132,6 +156,15 @@ public class UserController {
         } catch (Exception e) {
             e.printStackTrace();
             return new Result(false, MessageConstant.EDIT_USERINFO_FAIL);
+=======
+    public Result editUser(@RequestParam List<Integer> ids,@RequestBody com.ismyself.pojo.User user){
+        try {
+            userService.editUser(ids,user);
+            return new Result(true,MessageConstant.EDIT_USERINFO_SUCCESS);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new Result(false,MessageConstant.EDIT_USERINFO_FAIL);
+>>>>>>> e01b3a32a27b161269bdc036bebc58ffd7672bf5
         }
     }
 

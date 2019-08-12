@@ -29,7 +29,6 @@ public class RoleController {
     //findList
     @RequestMapping("/findPageList")
     private Result findList(@RequestBody QueryPageBean queryPageBean) {
-
         try {
             PageResult pageResult = roleService.findList(queryPageBean);
             return new Result(true, MessageConstant.QUERY_ROLE_SUCCESS, pageResult);
@@ -103,6 +102,9 @@ public class RoleController {
     }
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e01b3a32a27b161269bdc036bebc58ffd7672bf5
 }

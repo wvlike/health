@@ -17,6 +17,7 @@ public interface UserDao {
 
     User findUserByUsername(String username);
 
+<<<<<<< HEAD
     Page<User> selectByCondition(String queryString);
 
     void addUser(User user);
@@ -32,4 +33,30 @@ public interface UserDao {
     void editUser(User user);
 
     void setUserAndRole(HashMap<String, Integer> map);
+=======
+
+    //分页查询
+    Page<User> selectByCondition(String queryString);
+
+    //新增用户,返回自增主键
+    void addUser(User user);
+
+    //往用户和角色中间表插入数据
+    void setUserAndRole(HashMap<String, Integer> map);
+
+    //根据用户id删除用户和角色关联表的
+    void deleteUserAndRoleByUid(Integer userId);
+
+    //根据用户id删除用户
+    void deleteUserById(Integer userId);
+
+    //根据ID查询用户信息
+    User findUserById(Integer id);
+
+    //根据用户ID查询用户角色列表
+    List<Integer> findRoleIdsByUserId(Integer uid);
+
+    //编辑用户信息
+    void editUser(User user);
+>>>>>>> e01b3a32a27b161269bdc036bebc58ffd7672bf5
 }

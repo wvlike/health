@@ -36,4 +36,8 @@ public interface RoleDao {
     void update(Role role);
 
     List<Role> findAllRole();
+<<<<<<< HEAD
+=======
+
+>>>>>>> e01b3a32a27b161269bdc036bebc58ffd7672bf5
 }

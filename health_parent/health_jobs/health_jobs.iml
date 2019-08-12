@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration />
+    </facet>
     <facet type="web" name="Web">
       <configuration>
         <descriptors>
@@ -15,6 +18,7 @@
         </sourceRoots>
       </configuration>
     </facet>
+<<<<<<< HEAD
     <facet type="Spring" name="Spring">
       <configuration>
         <fileset id="fileset" name="ApplicationContext Jobs" removed="false">
@@ -31,6 +35,8 @@
         </fileset>
       </configuration>
     </facet>
+=======
+>>>>>>> e01b3a32a27b161269bdc036bebc58ffd7672bf5
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />
@@ -41,7 +47,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
-    <orderEntry type="jdk" jdkName="1.8-64" jdkType="JavaSDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="health_interface" />
     <orderEntry type="module" module-name="health_pojo" />
@@ -56,7 +62,7 @@
     <orderEntry type="module-library">
       <library name="Maven: com.alibaba:jconsole:1.8.0">
         <CLASSES>
-          <root url="jar://D:/Java/jdk1.8.0_212/lib/jconsole.jar!/" />
+          <root url="jar://C:/Program Files (x86)/Java/jdk1.8.0_151/lib/jconsole.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -65,7 +71,7 @@
     <orderEntry type="module-library">
       <library name="Maven: com.alibaba:tools:1.8.0">
         <CLASSES>
-          <root url="jar://D:/Java/jdk1.8.0_212/lib/tools.jar!/" />
+          <root url="jar://C:/Program Files (x86)/Java/jdk1.8.0_151/lib/tools.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -124,7 +130,6 @@
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-config:5.0.10.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-taglibs:5.0.10.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-acl:5.0.10.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
     <orderEntry type="library" name="Maven: com.aliyun:aliyun-java-sdk-core:3.3.1" level="project" />
     <orderEntry type="library" name="Maven: org.json:json:20170516" level="project" />
     <orderEntry type="library" name="Maven: com.aliyun:aliyun-java-sdk-dysmsapi:1.0.0" level="project" />

@@ -4,18 +4,28 @@ import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.ismyself.constant.MessageConstant;
+<<<<<<< HEAD
 import com.ismyself.dao.MenuDao;
+=======
+>>>>>>> e01b3a32a27b161269bdc036bebc58ffd7672bf5
 import com.ismyself.dao.PermissionDao;
 import com.ismyself.dao.RoleDao;
 import com.ismyself.dao.UserDao;
 import com.ismyself.entity.PageResult;
 import com.ismyself.entity.Result;
+<<<<<<< HEAD
 import com.ismyself.pojo.Menu;
+=======
+>>>>>>> e01b3a32a27b161269bdc036bebc58ffd7672bf5
 import com.ismyself.pojo.Permission;
 import com.ismyself.pojo.Role;
 import com.ismyself.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
+<<<<<<< HEAD
 import org.springframework.security.core.parameters.P;
+=======
+import org.springframework.transaction.annotation.Transactional;
+>>>>>>> e01b3a32a27b161269bdc036bebc58ffd7672bf5
 
 import java.util.HashMap;
 import java.util.List;
@@ -29,6 +39,7 @@ import java.util.Set;
  * @description：
  */
 @Service(interfaceClass = UserService.class)
+@Transactional
 public class UserServiceImpl implements UserService {
 
     @Autowired
@@ -57,6 +68,7 @@ public class UserServiceImpl implements UserService {
         return user;
     }
 
+<<<<<<< HEAD
     @Override
     public List<Menu> findUserMenuByUsername(String username) {
         List<Menu> list = menuDao.findMenuByUsername(username);
@@ -74,6 +86,8 @@ public class UserServiceImpl implements UserService {
 
 
 
+=======
+>>>>>>> e01b3a32a27b161269bdc036bebc58ffd7672bf5
     //分页查询用户列表信息
     @Override
     public Result findUser2Page(Integer currentPage, Integer pageSize, String queryString) {

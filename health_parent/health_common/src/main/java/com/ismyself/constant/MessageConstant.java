@@ -66,9 +66,15 @@ public class MessageConstant {
     public static final String GET_USERNAME_SUCCESS = "获取当前登录用户名称成功";
     public static final String GET_USERLIST_SUCCESS = "获取用户列表成功";
     public static final String GET_USERNAME_FAIL = "获取当前登录用户名称失败";
+    public static final String GET_USERLIST_FAIL = "获取用户列表失败";
     public static final String GET_MENU_SUCCESS = "获取当前登录用户菜单成功";
     public static final String GET_MENU_FAIL = "获取当前登录用户菜单失败";
+<<<<<<< HEAD
     public static final String GET_USERLIST_FAIL = "获取用户列表失败";
+=======
+    public static final String ADD_USER_SUCCESS = "添加用户成功";
+    public static final String ADD_USER_FAIL = "添加用户失败";
+>>>>>>> e01b3a32a27b161269bdc036bebc58ffd7672bf5
     public static final String GET_MEMBER_NUMBER_REPORT_SUCCESS = "获取会员统计数据成功";
     public static final String GET_MEMBER_NUMBER_REPORT_FAIL = "获取会员统计数据失败";
     public static final String GET_SETMEAL_COUNT_REPORT_SUCCESS = "获取套餐统计数据成功";
@@ -114,16 +120,22 @@ public class MessageConstant {
     public static final String EDIT_ROLE_SUCCESS = "编辑角色成功";
     public static final String EDIT_ROLE_FAIL = "编辑角色失败";
 
+<<<<<<< HEAD
     public static final String ADD_USER_SUCCESS = "添加用户成功";
     public static final String ADD_USER_FAIL = "添加用户失败";
+=======
+>>>>>>> e01b3a32a27b161269bdc036bebc58ffd7672bf5
     public static final String DELETE_USER_SUCCESS = "删除用户成功";
     public static final String DELETE_USER_FAIL = "删除用户失败";
     public static final String GET_USERINFO_SUCCESS = "获取用户信息失败";
     public static final String GET_USERINFO_FAIL = "获取用户信息失败";
     public static final String EDIT_USERINFO_SUCCESS = "修改用户信息成功";
     public static final String EDIT_USERINFO_FAIL = "修改用户信息失败";
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e01b3a32a27b161269bdc036bebc58ffd7672bf5
 }
 
 
